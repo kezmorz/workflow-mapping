@@ -7,6 +7,7 @@ const Main = styled.main`
     height: calc(100% - 56px);
     position: relative;
     margin-top: 56px;
+    overflow-x: hidden;
 `
 
 const layout = (props) => (

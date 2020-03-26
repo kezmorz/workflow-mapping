@@ -1,11 +1,119 @@
 {
     "cards": [
-        { "name": "card1", "xPos": 50, "yPos": 100, "colourScheme": "default", "content": "VALIDATING INPUTS AND DEFINING THE PROBLEM" },
-        { "name": "card2", "xPos": 350, "yPos": 100, "colourScheme": "red", "content": "GATHER ADDITIONAL INFORMATION" },
-        { "name": "card3", "xPos": 650, "yPos": 100, "colourScheme": "orange", "content": "DEVELOP PRELIMINARY DESIGN - DESIGN FIX AND ASSESSMENT" },
-        { "name": "card4", "xPos": 950, "yPos": 100, "colourScheme": "yellow", "content": "STATUTORY CONSULATION" },
-        { "name": "card5", "xPos": 1250, "yPos": 100, "colourScheme": "green", "content": "FINALISE AND FIX PRELIMINARY DESIGN" },
-        { "name": "card6", "xPos": 1550, "yPos": 100, "colourScheme": "pink", "content": "ASSESSMENT AND COMPLETE DCO DOCUMENTS" }
+        { 
+            "name": "card1", 
+            "xPos": 50, 
+            "yPos": 100, 
+            "colourScheme": "default", 
+            "content": "VALIDATING INPUTS AND DEFINING THE PROBLEM",
+            "information": {
+                "description": "A short description about the card",
+                "prerequisite": [
+                    "step 1", "step 2", "step 3"
+                ],
+                "pcf": [
+                    "pcf1", "pcf2"
+                ],
+                "hyperlinks": [
+                    "hyperlink 1", "hyperlink 2"
+                ]
+            }
+        },
+        { 
+            "name": "card2", 
+            "xPos": 350, 
+            "yPos": 100, 
+            "colourScheme": "red", 
+            "content": "GATHER ADDITIONAL INFORMATION",
+            "information": {
+                "description": "A short description about the card",
+                "prerequisite": [
+                    "step 1", "step 2", "step 3"
+                ],
+                "pcf": [
+                    "pcf1", "pcf2"
+                ],
+                "hyperlinks": [
+                    "hyperlink 1", "hyperlink 2"
+                ]
+            }
+        },
+        { 
+            "name": "card3", 
+            "xPos": 650, 
+            "yPos": 100, 
+            "colourScheme": "yellow", 
+            "content": "DEVELOP PRELIMINARY DESIGN - DESIGN FIX AND ASSESSMENT",
+            "information": {
+                "description": "A short description about the card",
+                "prerequisite": [
+                    "step 1", "step 2", "step 3"
+                ],
+                "pcf": [
+                    "pcf1", "pcf2"
+                ],
+                "hyperlinks": [
+                    "hyperlink 1", "hyperlink 2"
+                ]
+            }
+        },
+        { 
+            "name": "card4", 
+            "xPos": 950, 
+            "yPos": 100, 
+            "colourScheme": "green", 
+            "content": "STATUTORY CONSULATION",
+            "information": {
+                "description": "A short description about the card",
+                "prerequisite": [
+                    "step 1", "step 2", "step 3"
+                ],
+                "pcf": [
+                    "pcf1", "pcf2"
+                ],
+                "hyperlinks": [
+                    "hyperlink 1", "hyperlink 2"
+                ]
+            }
+        },
+        { 
+            "name": "card5", 
+            "xPos": 1250, 
+            "yPos": 100, 
+            "colourScheme": "purple", 
+            "content": "FINALISE AND FIX PRELIMINARY DESIGN",
+            "information": {
+                "description": "A short description about the card",
+                "prerequisite": [
+                    "step 1", "step 2", "step 3"
+                ],
+                "pcf": [
+                    "pcf1", "pcf2"
+                ],
+                "hyperlinks": [
+                    "hyperlink 1", "hyperlink 2"
+                ]
+            }
+        },
+        { 
+            "name": "card6", 
+            "xPos": 1550, 
+            "yPos": 100, 
+            "colourScheme": "pink", 
+            "content": "ASSESSMENT AND COMPLETE DCO DOCUMENTS",
+            "information": {
+                "description": "A short description about the card",
+                "prerequisite": [
+                    "step 1", "step 2", "step 3"
+                ],
+                "pcf": [
+                    "pcf1", "pcf2"
+                ],
+                "hyperlinks": [
+                    
+                ]
+            }
+        }
     ],
     "connections" : [
         { "source": "card1", "sourceConnector": "right", "target": "card2", "targetConnector": "left" },

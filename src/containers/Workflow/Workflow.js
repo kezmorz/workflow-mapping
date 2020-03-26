@@ -7,12 +7,14 @@ class Workflow extends Component {
     state = {
         cards: workflow.cards,
         connections: workflow.connections,
-        showSideDrawer: false
+        showSideDrawer: false,
+        sideDrawerCard: null
     }
 
     sideDrawerOpenHandler = (card) => {
         this.setState({
-            showSideDrawer: true
+            showSideDrawer: true,
+            sideDrawerCard: card
         })
     }
 
@@ -31,7 +33,8 @@ class Workflow extends Component {
                     openSideDrawer={this.sideDrawerOpenHandler} />
                 <SideDrawer 
                     show={this.state.showSideDrawer} 
-                    close={this.sideDrawerCloseHandler}/>
+                    close={this.sideDrawerCloseHandler}
+                    card={this.state.sideDrawerCard}/>
             </Fragment>
         );
     }

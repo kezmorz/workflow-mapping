@@ -19,7 +19,7 @@ const NavigationHeader = styled.header`
 const navigationBar = (props) => {
     return (
         <NavigationHeader>
-            <p style={{color: "white"}}>Highways Sector Design Manual</p>
+            <p style={{color: "white"}}>Highways - Stage 3</p>
         </NavigationHeader>
     )
 }
