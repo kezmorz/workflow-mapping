@@ -33,6 +33,12 @@ const sideDrawer = (props) => {
                 <SideDrawerHeader>
                     <button onClick={props.close}>Close</button>
                 </SideDrawerHeader>
+                <div style={{padding: "10px"}}>
+                    <h3>Description</h3>
+                    <h3>Prerequisite Steps</h3>
+                    <h3>Key Persons</h3>
+                    <h3>Files</h3>
+                </div>
             </SideDrawerDiv>
         </Fragment>
     )
