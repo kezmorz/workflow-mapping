@@ -4,6 +4,7 @@ import Layout from './components/Layout/Layout';
 import Workflow from './containers/Workflow/Workflow';
 
 const AppDiv = styled.div`
+	position: absolute;
 	height: 100vh;
 	width: 100vw;
 `

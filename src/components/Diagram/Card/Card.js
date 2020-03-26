@@ -15,7 +15,7 @@ const StyledCard = styled.div`
     background-color: white;
 `
 
-const StyledCardHeader = styled.div`
+const StyledCardHeader = styled.header`
     width: 100%;
     height: 20px;
     background-color: #ADE5F7;

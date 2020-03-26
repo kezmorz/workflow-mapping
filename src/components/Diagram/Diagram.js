@@ -21,10 +21,9 @@ const StyledDiagram = styled.div`
     }
 `
 
-const diagram = (props) => {
-
+const Diagram = (props) => {
     const engine = new DiagramEngine({});
-    const model = new DiagramModel();
+    const model = new DiagramModel(); 
 
 	engine.getLayerFactories().registerFactory(new NodeLayerFactory());
 	engine.getLayerFactories().registerFactory(new LinkLayerFactory());
@@ -42,6 +41,13 @@ const diagram = (props) => {
             content: card.content
         });
         cardModel.setPosition(card.xPos, card.yPos);
+        cardModel.registerListener({
+            selectionChanged: (e) => {
+                if (e.isSelected) {
+                    props.openSideDrawer(e.entity.getOptions().name);
+                }
+            }
+        });
         return cardModel;
     });
 
@@ -58,14 +64,12 @@ const diagram = (props) => {
 
     model.addAll(...cardModels, ...connectionModels);
     engine.setModel(model);
-    console.log(engine);
 
     return (
         <StyledDiagram>
             <CanvasWidget engine={engine} />
-            <button onClick={() => { engine.zoomToFit() }}>Zoom To Fit</button>
         </StyledDiagram>
     )
 }
 
-export default diagram;
+export default Diagram;
