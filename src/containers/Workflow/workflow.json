@@ -1,11 +1,11 @@
 {
     "cards": [
-        { "name": "card1", "xPos": 50, "yPos": 100, "content": "VALIDATING INPUTS AND DEFINING THE PROBLEM" },
-        { "name": "card2", "xPos": 350, "yPos": 100, "content": "GATHER ADDITIONAL INFORMATION" },
-        { "name": "card3", "xPos": 650, "yPos": 100, "content": "DEVELOP PRELIMINARY DESIGN - DESIGN FIX AND ASSESSMENT" },
-        { "name": "card4", "xPos": 950, "yPos": 100, "content": "STATUTORY CONSULATION" },
-        { "name": "card5", "xPos": 1250, "yPos": 100, "content": "FINALISE AND FIX PRELIMINARY DESIGN" },
-        { "name": "card6", "xPos": 1550, "yPos": 100, "content": "ASSESSMENT AND COMPLETE DCO DOCUMENTS" }
+        { "name": "card1", "xPos": 50, "yPos": 100, "colourScheme": "default", "content": "VALIDATING INPUTS AND DEFINING THE PROBLEM" },
+        { "name": "card2", "xPos": 350, "yPos": 100, "colourScheme": "red", "content": "GATHER ADDITIONAL INFORMATION" },
+        { "name": "card3", "xPos": 650, "yPos": 100, "colourScheme": "orange", "content": "DEVELOP PRELIMINARY DESIGN - DESIGN FIX AND ASSESSMENT" },
+        { "name": "card4", "xPos": 950, "yPos": 100, "colourScheme": "yellow", "content": "STATUTORY CONSULATION" },
+        { "name": "card5", "xPos": 1250, "yPos": 100, "colourScheme": "green", "content": "FINALISE AND FIX PRELIMINARY DESIGN" },
+        { "name": "card6", "xPos": 1550, "yPos": 100, "colourScheme": "pink", "content": "ASSESSMENT AND COMPLETE DCO DOCUMENTS" }
     ],
     "connections" : [
         { "source": "card1", "sourceConnector": "right", "target": "card2", "targetConnector": "left" },

@@ -27,7 +27,7 @@ class Workflow extends Component {
             <Fragment>
                 <Diagram 
                     cards={this.state.cards} 
-                    connections={this.state.connections} 
+                    connections={this.state.connections}
                     openSideDrawer={this.sideDrawerOpenHandler} />
                 <SideDrawer 
                     show={this.state.showSideDrawer} 

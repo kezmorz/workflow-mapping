@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Connector from '../Connector/Connector';
 
 const StyledCard = styled.div`
-    border: solid 2px ${props => props.selected ? '#1E75C3' : '#ADE5F7'};
+    border: solid 2px ${props => props.selected ? props.colourScheme.accent : props.colourScheme.mask};
     border-radius: 5px;
     width: 200px;
     height: 100px;
@@ -18,7 +18,7 @@ const StyledCard = styled.div`
 const StyledCardHeader = styled.header`
     width: 100%;
     height: 20px;
-    background-color: #ADE5F7;
+    background-color: ${props => props.colourScheme.mask};
 `;
 
 const StyledCardContent = styled.p`
@@ -57,6 +57,7 @@ const card = (props) => {
         <StyledCard 
             className={'card'}
             data-card-node-name={props.node.getOptions().name}
+            colourScheme={props.node.getOptions().colourScheme}
             selected={props.node.isSelected()}>
             {connectors.map(connector => {
                 return (
@@ -67,8 +68,11 @@ const card = (props) => {
                         {...connector}/>
                 )
             })}
-            <StyledCardHeader />
-            <StyledCardContent>{props.node.getOptions().content}</StyledCardContent>
+            <StyledCardHeader 
+                colourScheme={props.node.getOptions().colourScheme}/>
+            <StyledCardContent>{
+                props.node.getOptions().content}
+            </StyledCardContent>
         </StyledCard>
     );
 }

@@ -8,6 +8,7 @@ import CardModel from '../../models/CardModel';
 import ConnectionFactory from '../../factories/ConnectionFactory';
 import ConnectionModel from '../../models/ConnectionModel';
 import ConnectorFactory from '../../factories/ConnectorFactory';
+import Colours from '../../helpers/Colours';
 
 const StyledDiagram = styled.div`
     background: #DBDBDB;
@@ -38,14 +39,15 @@ const Diagram = (props) => {
     const cardModels = props.cards.map(card => {
         const cardModel = new CardModel({
             name: card.name,
-            content: card.content
+            content: card.content,
+            colourScheme: Colours[card.colourScheme]
         });
         cardModel.setPosition(card.xPos, card.yPos);
         cardModel.registerListener({
             selectionChanged: (e) => {
-                if (e.isSelected) {
-                    props.openSideDrawer(e.entity.getOptions().name);
-                }
+                // if (e.isSelected) {
+                //     props.openSideDrawer(e.entity.getOptions().name);
+                // }
             }
         });
         return cardModel;

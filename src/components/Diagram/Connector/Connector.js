@@ -9,12 +9,12 @@ const StyledConnector = styled.div`
     position: absolute;
     z-index: 10;
 	background: white;
-	border: 2px solid #ADE5F7;
+	border: 2px solid ${props => props.colourScheme.mask};
     border-radius: ${props => props.borderRadius};
     cursor: pointer;
 
     &:hover {
-        background: #1E75C3;
+        background: ${props => props.colourScheme.accent};
     }
 `
 
@@ -51,6 +51,7 @@ const Connector = (props) => {
 			top={props.top}
 			size={props.size}
 			borderRadius={props.borderRadius}
+			colourScheme={props.port.getNode().getOptions().colourScheme}
 			>
         </StyledConnector>
     )
