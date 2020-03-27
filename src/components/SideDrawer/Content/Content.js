@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Section from './Section/Section';
 
 const content = (props) => {
@@ -29,18 +29,20 @@ const content = (props) => {
         <Section heading={'Hyperlinks'}>
             <ul>
                 {props.information.hyperlinks.map(link => (
-                    <li key={link}>{link}</li>
+                    <li key={link}>
+                        <a href={link}>{link}</a>
+                    </li>
                 ))}
             </ul>
         </Section>
     )
     return (
-        <div>
+        <Fragment>
             {description}
             {prerequisite}
             {pcf}
             {hyperlinks}
-        </div>
+        </Fragment>
     )
 }
 

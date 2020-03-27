@@ -71,6 +71,7 @@ const Diagram = (props) => {
             return connectionModel;
         });
         model.addAll(...cardModels, ...connectionModels);
+        model.setLocked(true);
     });
 
     return (
