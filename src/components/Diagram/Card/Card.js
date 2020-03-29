@@ -22,7 +22,8 @@ const StyledCardHeader = styled.header`
 `;
 
 const StyledCardContent = styled.p`
-    margin: auto 10px;
+    margin: auto;
+    padding: 0 10px;
     text-align: center;
 `;
 

@@ -1,48 +1,27 @@
 import React, { Fragment } from 'react';
-import Section from './Section/Section';
+import styled from '@emotion/styled';
+import ContentDescription from './ContentDescription';
+import ContentList from './ContentList';
+
+const S = {
+    Content: styled.div`
+        overflow-y: auto;
+    `
+}
 
 const content = (props) => {
-    const description = (
-        <Section heading={'Description'}>
-            <p>{props.information.description}</p>
-        </Section>
-    );
-    const prerequisite = (props.information.prerequisite.length > 0) && (
-        <Section heading={'Prerequisite Steps'}>
-            <ul>
-                {props.information.prerequisite.map(step => (
-                    <li key={step}>{step}</li>
-                ))}
-            </ul>
-        </Section>
-    )
-    const pcf = (props.information.pcf.length > 0) && (
-        <Section heading={'PCF Products'}>
-            <ul>
-                {props.information.pcf.map(product => (
-                    <li key={product}>{product}</li>
-                ))}
-            </ul>
-        </Section>
-    )
-    const hyperlinks = (props.information.hyperlinks.length > 0) && (
-        <Section heading={'Hyperlinks'}>
-            <ul>
-                {props.information.hyperlinks.map(link => (
-                    <li key={link}>
-                        <a href={link}>{link}</a>
-                    </li>
-                ))}
-            </ul>
-        </Section>
-    )
     return (
-        <Fragment>
-            {description}
-            {prerequisite}
-            {pcf}
-            {hyperlinks}
-        </Fragment>
+        <S.Content>
+            <ContentDescription heading={'Description'} description={props.description} colourScheme={props.colourScheme}/>
+            <ContentList heading={'Prerequisite Steps'} items={props.prerequisite} colourScheme={props.colourScheme}/>
+            <ContentList heading={'PCF Products'} items={props.pcf} colourScheme={props.colourScheme}/>
+            <ContentList
+                heading={'Hyperlinks'}
+                items={props.hyperlinks.map(link => (
+                    <a href={link}>{link}</a>
+                ))}
+                colourScheme={props.colourScheme}/>
+        </S.Content>
     )
 }
 

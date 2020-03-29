@@ -24,7 +24,6 @@ const Connector = (props) => {
 	useEffect(() => {
 		const listenerHandle = props.engine.registerListener({
 			canvasReady: () => {
-				console.log("Canvas ready 1");
 				props.port.updateCoords(props.engine.getPortCoords(props.port, ref.current));
 			}
 		});
@@ -35,12 +34,6 @@ const Connector = (props) => {
 			listenerHandle && listenerHandle.deregister();
 		}
 	});
-
-	// componentDidUpdate(prevProps: Readonly<PortProps>, prevState, snapshot?: any): void {
-	// 	if (!this.props.port.reportedPosition) {
-	// 		this.report();
-	// 	}
-	// }
 
     return (
 		<StyledConnector 
