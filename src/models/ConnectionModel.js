@@ -7,7 +7,7 @@ class ConnectionModel extends LinkModel {
             ...options,
             type: 'connection',
             width: 3,
-            color: '#767676',
+            color: '#575757',
             selectedColor: '#1E75C3',
             curvyness: 70
         });

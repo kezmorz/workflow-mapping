@@ -8,7 +8,7 @@ const StyledConnector = styled.div`
 	left: ${props => props.left};
     position: absolute;
     z-index: 10;
-	background: white;
+	background: #FFFFFF;
 	border: 2px solid ${props => props.colourScheme.mask};
     border-radius: ${props => props.borderRadius};
     cursor: pointer;

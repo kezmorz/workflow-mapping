@@ -12,7 +12,7 @@ const StyledCard = styled.div`
     align-items: flex-start;
     justify-content: space-between;
     position: relative;
-    background-color: white;
+    background-color: #FFFFFF;
 `
 
 const StyledCardHeader = styled.header`

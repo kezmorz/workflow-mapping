@@ -14,7 +14,7 @@ const SideDrawerDiv = styled.div`
     z-index: 200;
     display: flex;
     flex-direction: column;
-    background-color: #DBDBDB;
+    background-color: #FAFAFA;
     box-sizing: border-box;
     transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 0.3s ease-out;

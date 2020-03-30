@@ -12,14 +12,14 @@ const S = {
         background-color: ${props => props.colourScheme.mask};
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-        box-shadow: 0 0 5px 0 black;
+        box-shadow: 0 0 5px 0 #000000;
     `,
     Description: styled.p`
         padding: 14px 10px;
         margin: 0;
         min-height: 50px;
-        background-color: white;
-        box-shadow: 0 0 5px 0 black;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 5px 0 #000000;
     `
 }
 

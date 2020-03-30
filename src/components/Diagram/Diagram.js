@@ -11,7 +11,7 @@ import ConnectorFactory from '../../factories/ConnectorFactory';
 import Colours from '../../helpers/Colours';
 
 const StyledDiagram = styled.div`
-    background: #DBDBDB;
+    background: #FAFAFA;
     width: 100%;
     height: 100%;
 
@@ -71,7 +71,6 @@ const Diagram = (props) => {
             return connectionModel;
         });
         model.addAll(...cardModels, ...connectionModels);
-        model.setLocked(true);
     });
 
     return (

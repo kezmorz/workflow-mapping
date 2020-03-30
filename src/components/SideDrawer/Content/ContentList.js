@@ -26,7 +26,7 @@ const S = {
         }
 
         &:hover {
-            box-shadow: 0px 0px 2px 1px black;
+            box-shadow: 0px 0px 2px 1px #000000;
         }
     `,
     Container: styled.div`
@@ -46,7 +46,8 @@ const S = {
         padding: 0 5px;
         display: flex;
         align-items: center;
-        background-color: white;
+        background-color: #FFFFFF;
+        border: 1px solid #DBDBDB;
         border-left: 10px solid ${props => props.colourScheme.mask};
         border-radius: 5px;
     `
